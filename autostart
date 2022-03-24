@@ -1,0 +1,66 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+# conky run 
+#~/mconkykfg/sideone/./conkyOPENBOX.sh &
+#~/mconkykfg/sideone/./conkyOPENBOX2.sh &
+#conky -q -c ~/myconkycfg/sideone/.conky3.conf --daemonize --pause=1 &
+#conky -qc  ~/MyConkyConfig/.conky0.conf --daemonize --pause=1 & 
+#conky -qc  ~/MyConkyConfig/.centerclock.conf --pause=1 &
+#conky -q -c /home/mega/.config/conky/conkyopenbox.conf --pause=1 &
+# make screen more vivd
+# xgamma -quiet -rgamma 1.05 -ggamma 1.03 -bgamma 0.970 &
+#xgamma -quiet -rgamma 1.06 -ggamma 1.03 -bgamma 0.970 &
+
+# Set tapping on touchpad ON:
+#xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1 &
+
+# change keyboard layout
+setxkbmap -layout "us,ara" -option "grp:win_space_toggle" &
+
+# wallpaper
+#feh --bg-scale Pictures/adwaita-day.jpg &
+# sh ~/.sh/fehbg
+#albert
+#albert &
+
+# picom &
+
+
+# touchpad gestures
+#libinput-gestures-setup start &
+
+#
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+#
+#numlockx &
+
+# Make GTK apps look and behave how they were set up in the gnome config tools
+#if test -x /usr/libexec/gnome-settings-daemon >/dev/null; then
+#  /usr/libexec/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null; then
+#  gnome-settings-daemon &
+# Make GTK apps look and behave how they were set up in the XFCE config tools
+#elif which xfce-mcs-manager >/dev/null; then
+#  xfce-mcs-manager n &
+#fi
+
+# run gammy 
+# gammy &  disabled
+# insted
+#redshift -O 3000 &
+
+# blink screen after time 
+#xset s 240 &
+xsetroot -solid "#111" &
+# set bash script to notify me with battery is low
+# high cpu usage problem sh ~/.sh/battery_status &
+#sh ~/.sh/every2h &
+#
