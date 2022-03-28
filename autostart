@@ -59,7 +59,8 @@ setxkbmap -layout "us,ara" -option "grp:win_space_toggle" &
 
 # blink screen after time 
 #xset s 240 &
-xsetroot -solid "#111" &
+#xsetroot -solid "#111" &
+xsetroot -solid "#005663" &
 # set bash script to notify me with battery is low
 # high cpu usage problem sh ~/.sh/battery_status &
 #sh ~/.sh/every2h &
