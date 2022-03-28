@@ -462,8 +462,8 @@
       </action>
     </keybind>
 
-    <keybind key="A-S-r" chroot="true">
-      <keybind key="A-S-r">
+    <keybind key="W-r" chroot="true">
+      <keybind key="W-r">
         <action name="BreakChroot" />
       </keybind>
       <keybind key="Down">
