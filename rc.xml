@@ -486,21 +486,21 @@
       </action>
     </keybind>
     <!--LATER-->
-    <!-- resize windows -->
-    <keybind key="C-W-equal">
+    <!-- scale windows -->
+    <keybind key="W-equal">
       <action name="ResizeRelative">
-        <top>5</top>
-        <right>5</right>
-        <left>5</left>
-        <bottom>5</bottom>
+        <top>8</top>
+        <right>8</right>
+        <left>8</left>
+        <bottom>8</bottom>
       </action>
     </keybind>
-    <keybind key="C-W-minus">
+    <keybind key="W-minus">
       <action name="ResizeRelative">
-        <top>-5</top>
-        <right>-5</right>
-        <left>-5</left>
-        <bottom>-5</bottom>
+        <top>-8</top>
+        <right>-8</right>
+        <left>-8</left>
+        <bottom>-8</bottom>
       </action>
     </keybind>
     <keybind key="W-r" chroot="true">
