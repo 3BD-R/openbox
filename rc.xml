@@ -257,10 +257,10 @@
     <keybind key="A-Tab">
       <action name="NextWindow">
         <!-- disable black/white borders on switching NOTE it conflict with docor tag line 857 -->
-        <bar>yes</bar>
+        <bar>no</bar>
         <raise>yes</raise>
         <desktops>yes</desktops>
-        <dialog>none</dialog>
+        <dialog>list</dialog>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -334,173 +334,24 @@
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
     </keybind>
-    <keybind key="W-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <width>50%</width>
-        <!-- <width>671</width> -->
-      </action>
-      <!--  action name="MoveToEdgeEast"/  -->
-    </keybind>
-    <keybind key="W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <width>50%</width>
-        <!-- <width>671</width> -->
-        <!-- it depend on the width of screen % or px -->
-      </action>
-      <!--  action name="MoveToEdgeWest"/  -->
-    </keybind>
-    <keybind key="W-Up">
-      <action name="MaximizeFull"/>
-      <!-- action name="UnmaximizeFull"/ -->
-      <action name="MoveResizeTo">
-        <width>100%</width>
-        <height>100%</height>
-      </action>
-      <action name="MoveToCenter"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <width>80%</width>
-        <height>80%</height>
-      </action>
-      <action name="MoveToCenter"/>
-    </keybind>
-    <keybind key="W-A-Up">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-        <!--<width>671</width>
-        <height>372</height> -->
-      </action>
-    </keybind>
-    
-
-    <!-- VIM keybinds -->
-    <!--Left-->
-    <keybind key="W-h">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <width>50%</width>
-      </action>
-    </keybind>
-    <!--RIGHT-->
-    <keybind key="W-l">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <width>50%</width>
-      </action>
-    </keybind>
-    <!--DOWN-->
-    <keybind key="W-j">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <y>-0</y>
-        <height>50%</height>
-        <width>100%</width>
-      </action>
-    </keybind>
-    <!--DOWN-->
-        <keybind key="W-k">
-          <action name="UnmaximizeFull"/>
-          <action name="MoveResizeTo">
-            <y>0</y>
-            <height>50%</height>
-            <width>100%</width>
-          </action>
-        </keybind>
 
 
 
-    <keybind key="W-A-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-        <!--<width>671</width>
-        <height>372</height> -->
-      </action>
-    </keybind>
-    <keybind key="W-A-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>-0</y>
-        <width>50%</width>
-        <height>50%</height>
-        <!-- <width>671</width>
-        <height>372</height> -->
-      </action>
-    </keybind>
-    <keybind key="W-A-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>50%</width>
-        <height>50%</height>
-        <!-- <width>671</width>
-        <height>372</height> -->
-        <!-- 768/2-8(gaps around) -4(gaps beneath) -->
-      </action>
-    </keybind>
-    <!--LATER-->
-    <!--Move window inside workspace-->
-    <keybind key="C-W-Right">
-      <action name="MoveRelative">
-        <x>10</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <keybind key="C-W-Up">
-      <action name="MoveRelative">
-        <x>0</x>
-        <y>-10</y>
-      </action>
-    </keybind>
-    <keybind key="C-W-Down">
-      <action name="MoveRelative">
-        <x>0</x>
-        <y>10</y>
-      </action>
-    </keybind>
-    <keybind key="C-W-Left">
-      <action name="MoveRelative">
-        <x>-10</x>
-        <y>0</y>
-      </action>
-    </keybind>
-    <!--LATER-->
     <!-- scale windows -->
     <keybind key="W-equal">
       <action name="ResizeRelative">
-        <top>8</top>
-        <right>8</right>
-        <left>8</left>
-        <bottom>8</bottom>
+        <top>10</top>
+        <right>10</right>
+        <left>10</left>
+        <bottom>10</bottom>
       </action>
     </keybind>
     <keybind key="W-minus">
       <action name="ResizeRelative">
-        <top>-8</top>
-        <right>-8</right>
-        <left>-8</left>
-        <bottom>-8</bottom>
+        <top>-10</top>
+        <right>-10</right>
+        <left>-10</left>
+        <bottom>-10</bottom>
       </action>
     </keybind>
     <keybind key="W-r" chroot="true">
@@ -623,7 +474,7 @@
       <action name="Execute">
         <name>dmenu</name>
         <command>
-            dmenu_run -i -fn "DejaVu Sans Mono:size=10" -nb "#222222" -nf "#bbbbbb" -sb "#000000" -sf "#eeeeee"
+            dmenu_run -i -b -fn "DejaVu Sans Mono:size=10" -nb "#000000" -nf "#bbbbbb" -sb "#008800" -sf "#000000"
         </command>
       </action>
     </keybind>
@@ -638,7 +489,132 @@
         <name>logout</name>
         <command>openbox --exit</command>
       </action>
+  </keybind>
+
+  <!-- VIM keybinds -->
+  <!-- fullscreen -->
+  <keybind key="W-f">
+      <action name="MaximizeFull" />
+  </keybind>
+
+  <!-- minimize window -->
+  <keybind key="W-m">
+      <action name="UnmaximizeFull" />
+        <action name="MoveResizeTo">
+            <width> 80% </width>
+            <height> 80% </height>
+        </action>
     </keybind>
+  <!-- resize in half -->
+  <!-- top left -->
+  <keybind key="W-A-k">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+  </keybind>
+  <!-- top right -->
+    <keybind key="W-A-l">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- bottom right -->
+    <keybind key="W-A-j">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+  </keybind>
+  <!-- bottom left -->
+    <keybind key="W-A-h">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!--LEFT-->
+    <keybind key="W-h">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <!--RIGHT-->
+    <keybind key="W-l">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <!--DOWN-->
+    <keybind key="W-j">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <y>-0</y>
+        <height>50%</height>
+        <width>100%</width>
+      </action>
+    </keybind>
+    <!--DOWN-->
+        <keybind key="W-k">
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <y>0</y>
+            <height>50%</height>
+            <width>100%</width>
+          </action>
+        </keybind>
+
+        
+        <!-- Move window inside workspace -->
+        <!-- move rigt -->
+        <keybind key="C-W-l">
+      <action name="MoveRelative">
+        <x>10</x>
+        <y>0</y>
+      </action>
+  </keybind>
+  <!-- move up -->
+    <keybind key="C-W-k">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-10</y>
+      </action>
+  </keybind>
+  <!-- move down -->
+    <keybind key="C-W-j">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>10</y>
+      </action>
+  </keybind>
+  <!-- move left -->
+    <keybind key="C-W-h">
+      <action name="MoveRelative">
+        <x>-10</x>
+        <y>0</y>
+      </action>
+    </keybind>
+
+
   </keyboard>
   
   <mouse>
@@ -1115,6 +1091,7 @@
     <application name="Navigator" class="firefox" type="normal" role="browser">
       <decor> no </decor>
     </application>
+    <!-- all windows -->
     <application name="*" class="*" type="normal" role="*">
       <decor> no </decor>
       <position force="yes">
