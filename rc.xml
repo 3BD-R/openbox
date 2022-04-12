@@ -183,7 +183,8 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <!-- Keybindings for desktop switching -->
+
+    <!-- Keybindings for desktop switching 
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -213,7 +214,9 @@
         <to>right</to>
         <wrap>no</wrap>
       </action>
-    </keybind>
+    </keybind> -->
+  
+  
     <!--
     <keybind key="W-F1">
       <action name="GoToDesktop">
@@ -334,8 +337,102 @@
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
     </keybind>
-
-
+    <!--
+        
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="MaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>100%</width>
+        <height>100%</height>
+      </action>
+      <action name="MoveToCenter"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>80%</width>
+        <height>80%</height>
+      </action>
+      <action name="MoveToCenter"/>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind> -->
+    <!--LATER-->
+    <!-- Move window inside workspace 
+    <keybind key="C-W-Right">
+      <action name="MoveRelative">
+        <x>10</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-Up">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>-10</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-Down">
+      <action name="MoveRelative">
+        <x>0</x>
+        <y>10</y>
+      </action>
+    </keybind>
+    <keybind key="C-W-Left">
+      <action name="MoveRelative">
+        <x>-10</x>
+        <y>0</y>
+      </action>
+    </keybind> -->
 
     <!-- scale windows -->
     <keybind key="W-equal">
@@ -462,14 +559,16 @@
         <command>tkscreenshot</command>
       </action>
     </keybind>
-    <keybind key="W-p">
+    
+    <!-- keybind key="W-p">
       <action name="Execute">
         <name>albert</name>
         <command>
             albert toggle
         </command>
       </action>
-    </keybind>
+    </keybind -->
+
     <keybind key="A-space">
       <action name="Execute">
         <name>dmenu</name>
@@ -492,13 +591,41 @@
   </keybind>
 
   <!-- VIM keybinds -->
+  
+  <!-- vi bindings for desktop switching -->
+   <keybind key="C-A-l">
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+ <keybind key="C-A-h">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+  </keybind>
+  <!-- switch app to next/p desktop --> 
+    <keybind key="S-C-A-h">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-S-A-l">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+  </keybind>
+
   <!-- fullscreen -->
-  <keybind key="W-f">
+  <keybind key="W-p">
       <action name="MaximizeFull" />
   </keybind>
 
   <!-- minimize window -->
-  <keybind key="W-m">
+  <keybind key="W-n">
       <action name="UnmaximizeFull" />
         <action name="MoveResizeTo">
             <width> 80% </width>
