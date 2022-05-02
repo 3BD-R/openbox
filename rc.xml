@@ -165,7 +165,7 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>Bottom</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>8</floatingX>
     <floatingY>8</floatingY>
@@ -183,7 +183,6 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-
     <!-- Keybindings for desktop switching 
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -215,8 +214,6 @@
         <wrap>no</wrap>
       </action>
     </keybind> -->
-  
-  
     <!--
     <keybind key="W-F1">
       <action name="GoToDesktop">
@@ -326,18 +323,13 @@
         <execute>alacritty</execute>
       </action>
     </keybind>
-    <!-- conky -->
+    <!-- conky --> 
     <keybind key="W-F1">
       <action name="execute">
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
-    </keybind>
-    <keybind key="F1">
-      <action name="execute">
-        <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
-      </action>
-    </keybind>
-    <!--
+    </keybind> 
+        <!--
         
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
@@ -367,7 +359,7 @@
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <width>80%</width>
-        <height>80%</height>
+        <height>85%</height>
       </action>
       <action name="MoveToCenter"/>
     </keybind>
@@ -433,7 +425,6 @@
         <y>0</y>
       </action>
     </keybind> -->
-
     <!-- scale windows -->
     <keybind key="W-equal">
       <action name="ResizeRelative">
@@ -496,17 +487,15 @@
         </action>
       </keybind>
     </keybind> -->
-    
-
     <!-- HINT : USE KEYCHANE TO Resize -->
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight +4</command>
+        <command>brightness up</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight -4</command>
+        <command>brightness down</command>
       </action>
     </keybind>
     <!--   <keybind key="XF86AudioRaiseVolume">
@@ -561,7 +550,6 @@
         <command>tkscreenshot</command>
       </action>
     </keybind>
-    
     <!-- keybind key="W-p">
       <action name="Execute">
         <name>albert</name>
@@ -570,12 +558,11 @@
         </command>
       </action>
     </keybind -->
-
     <keybind key="A-space">
       <action name="Execute">
         <name>dmenu</name>
-        <command>
-            dmenu_run -i -b -fn "DejaVu Sans Mono:size=10" -nb "#000000" -nf "#bbbbbb" -sb "#008800" -sf "#000000"
+        <command><!--        dmenu_run -i -fn "DejaVu Sans Mono:size=10" -nb "#000000" -nf "#bbbbbb" -sb "#008800" -sf "#000000"  -->
+       dmenu_run -i -fn "DejaVu Sans Mono:size=10" 
         </command>
       </action>
     </keybind>
@@ -590,24 +577,22 @@
         <name>logout</name>
         <command>openbox --exit</command>
       </action>
-  </keybind>
-
-  <!-- VIM keybinds -->
-  
-  <!-- vi bindings for desktop switching -->
-   <keybind key="C-A-l">
+    </keybind>
+    <!-- VIM keybinds -->
+    <!-- vi bindings for desktop switching -->
+    <keybind key="C-A-l">
       <action name="GoToDesktop">
         <to>right</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
     </keybind>
- <keybind key="C-A-h">
+    <keybind key="C-A-h">
       <action name="GoToDesktop">
         <to>left</to>
-        <wrap>no</wrap>
+        <wrap>yes</wrap>
       </action>
-  </keybind>
-  <!-- switch app to next/p desktop --> 
+    </keybind>
+    <!-- switch app to next/p desktop -->
     <keybind key="S-C-A-h">
       <action name="SendToDesktop">
         <to>left</to>
@@ -619,24 +604,22 @@
         <to>right</to>
         <wrap>no</wrap>
       </action>
-  </keybind>
-
-  <!-- fullscreen -->
-  <keybind key="W-p">
-      <action name="MaximizeFull" />
-  </keybind>
-
-  <!-- minimize window -->
-  <keybind key="W-n">
-      <action name="UnmaximizeFull" />
-        <action name="MoveResizeTo">
-            <width> 80% </width>
-            <height> 80% </height>
-        </action>
     </keybind>
-  <!-- resize in half -->
-  <!-- top left -->
-  <keybind key="W-A-k">
+    <!-- fullscreen -->
+    <keybind key="W-p">
+      <action name="MaximizeFull"/>
+    </keybind>
+    <!-- minimize window -->
+    <keybind key="W-n">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width> 80% </width>
+        <height> 80% </height>
+      </action>
+    </keybind>
+    <!-- resize in half -->
+    <!-- top left -->
+    <keybind key="W-A-k">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>0</x>
@@ -644,8 +627,8 @@
         <width>50%</width>
         <height>50%</height>
       </action>
-  </keybind>
-  <!-- top right -->
+    </keybind>
+    <!-- top right -->
     <keybind key="W-A-l">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -664,8 +647,8 @@
         <width>50%</width>
         <height>50%</height>
       </action>
-  </keybind>
-  <!-- bottom left -->
+    </keybind>
+    <!-- bottom left -->
     <keybind key="W-A-h">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -703,39 +686,37 @@
       </action>
     </keybind>
     <!--DOWN-->
-        <keybind key="W-k">
-          <action name="UnmaximizeFull"/>
-          <action name="MoveResizeTo">
-            <y>0</y>
-            <height>50%</height>
-            <width>100%</width>
-          </action>
-        </keybind>
-
-        
-        <!-- Move window inside workspace -->
-        <!-- move rigt -->
-        <keybind key="C-W-l">
+    <keybind key="W-k">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <y>0</y>
+        <height>50%</height>
+        <width>100%</width>
+      </action>
+    </keybind>
+    <!-- Move window inside workspace -->
+    <!-- move rigt -->
+    <keybind key="C-W-l">
       <action name="MoveRelative">
         <x>10</x>
         <y>0</y>
       </action>
-  </keybind>
-  <!-- move up -->
+    </keybind>
+    <!-- move up -->
     <keybind key="C-W-k">
       <action name="MoveRelative">
         <x>0</x>
         <y>-10</y>
       </action>
-  </keybind>
-  <!-- move down -->
+    </keybind>
+    <!-- move down -->
     <keybind key="C-W-j">
       <action name="MoveRelative">
         <x>0</x>
         <y>10</y>
       </action>
-  </keybind>
-  <!-- move left -->
+    </keybind>
+    <!-- move left -->
     <keybind key="C-W-h">
       <action name="MoveRelative">
         <x>-10</x>
@@ -743,55 +724,52 @@
       </action>
     </keybind>
     <!-- vi resize keychain -->
-<keybind key="W-r" chroot="true">
-  <keybind key="Escape">
-    <action name="BreakChroot"/>
-  </keybind>
-  <keybind key="j">
-    <action name="ResizeRelative">
-      <bottom>5</bottom>
-    </action>
-  </keybind>
-  <keybind key="S-k">
-    <action name="ResizeRelative">
-      <bottom>-5</bottom>
-    </action>
-  </keybind>
-  <keybind key="k">
-    <action name="ResizeRelative">
-      <top>5</top>
-    </action>
-  </keybind>
-  <keybind key="S-j">
-    <action name="ResizeRelative">
-      <top>-5</top>
-    </action>
-  </keybind>
-  <keybind key="l">
-    <action name="ResizeRelative">
-      <right>5</right>
-    </action>
-  </keybind>
-  <keybind key="S-h">
-    <action name="ResizeRelative">
-      <right>-5</right>
-    </action>
-  </keybind>
-  <keybind key="h">
-    <action name="ResizeRelative">
-      <left>5</left>
-    </action>
-  </keybind>
-  <keybind key="S-l">
-    <action name="ResizeRelative">
-      <left>-5</left>
-    </action>
-  </keybind>
-</keybind>
-
-
+    <keybind key="W-r" chroot="true">
+      <keybind key="Escape">
+        <action name="BreakChroot"/>
+      </keybind>
+      <keybind key="j">
+        <action name="ResizeRelative">
+          <bottom>5</bottom>
+        </action>
+      </keybind>
+      <keybind key="S-k">
+        <action name="ResizeRelative">
+          <bottom>-5</bottom>
+        </action>
+      </keybind>
+      <keybind key="k">
+        <action name="ResizeRelative">
+          <top>5</top>
+        </action>
+      </keybind>
+      <keybind key="S-j">
+        <action name="ResizeRelative">
+          <top>-5</top>
+        </action>
+      </keybind>
+      <keybind key="l">
+        <action name="ResizeRelative">
+          <right>5</right>
+        </action>
+      </keybind>
+      <keybind key="S-h">
+        <action name="ResizeRelative">
+          <right>-5</right>
+        </action>
+      </keybind>
+      <keybind key="h">
+        <action name="ResizeRelative">
+          <left>5</left>
+        </action>
+      </keybind>
+      <keybind key="S-l">
+        <action name="ResizeRelative">
+          <left>-5</left>
+        </action>
+      </keybind>
+    </keybind>
   </keyboard>
-  
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->

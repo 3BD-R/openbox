@@ -14,6 +14,7 @@
 #conky -qc  ~/MyConkyConfig/.conky0.conf --daemonize --pause=1 & 
 #conky -qc  ~/MyConkyConfig/.centerclock.conf --pause=1 &
 #conky -q -c /home/mega/.config/conky/conkyopenbox.conf --pause=1 &
+#conky -q -c ~/.config/conky/conkyOpenboxDesktop.conf --pause=1 &
 # make screen more vivd
 # xgamma -quiet -rgamma 1.05 -ggamma 1.03 -bgamma 0.970 &
 #xgamma -quiet -rgamma 1.06 -ggamma 1.03 -bgamma 0.970 &
@@ -26,11 +27,11 @@ setxkbmap -layout "us,ara" -option "grp:win_space_toggle" &
 
 # wallpaper
 #feh --bg-scale Pictures/adwaita-day.jpg &
-# sh ~/.sh/fehbg
+#sh ~/.sh/fehbg
 #albert
 #albert &
 
-# picom &
+#picom &
 
 
 # touchpad gestures
@@ -55,12 +56,12 @@ setxkbmap -layout "us,ara" -option "grp:win_space_toggle" &
 # run gammy 
 # gammy &  disabled
 # insted
-#redshift -O 3000 &
+#redshift -O 5600 &
 
 # blink screen after time 
 #xset s 240 &
 #xsetroot -solid "#111" &
-xsetroot -solid "#005663" &
+#xsetroot -solid "#005663" &
 # set bash script to notify me with battery is low
 # high cpu usage problem sh ~/.sh/battery_status &
 #sh ~/.sh/every2h &
