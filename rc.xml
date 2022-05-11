@@ -318,18 +318,18 @@
       </action>
     </keybind>
     <!-- Alacritty -->
-    <keybind key="C-A-x">
+    <!-- keybind key="C-A-x">
       <action name="execute">
         <execute>alacritty</execute>
       </action>
-    </keybind>
-    <!-- conky --> 
-    <keybind key="W-F1">
+    </keybind -->
+    <!-- conky -->
+    <keybind key="W-b">
       <action name="execute">
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
-    </keybind> 
-        <!--
+    </keybind>
+    <!--
         
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
