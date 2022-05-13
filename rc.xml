@@ -612,10 +612,10 @@
     <!-- minimize window -->
     <keybind key="W-n">
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
+      <!-- action name="MoveResizeTo">
         <width> 80% </width>
         <height> 80% </height>
-      </action>
+      </action-->
     </keybind>
     <!-- resize in half -->
     <!-- top left -->
