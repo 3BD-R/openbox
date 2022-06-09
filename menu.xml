@@ -62,9 +62,18 @@
 
 <menu id="apps-term-menu" label="Terminals">
   
-  <item label="Gnome Terminal">
+  <item label="Kitty">
     <action name="Execute">
-      <command>gnome-terminal</command>
+      <command>kitty</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+   </item>
+
+  <item label="St">
+    <action name="Execute">
+      <command>st</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>
@@ -300,7 +309,7 @@
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
-  <separator label="Applications" />
+    <!-- <separator label="Applications" /> -->
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
   <menu id="apps-graphics-menu"/>
@@ -309,7 +318,7 @@
   <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
   <menu id="apps-fileman-menu"/>
-  <separator label="System" />
+    <!-- <separator label="System" /> -->
   <menu id="system-menu"/>
   <separator />
   <item label="Log Out">
