@@ -25,7 +25,7 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>Smart</policy>
+    <policy>UnderMouse</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
@@ -165,19 +165,19 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>Top</position>
+    <position>Bottom</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
-    <floatingX>8</floatingX>
-    <floatingY>8</floatingY>
+    <floatingX>0</floatingX>
+    <floatingY>751</floatingY>
     <noStrut>no</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
     <direction>Horizontal</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
-    <hideDelay>920</hideDelay>
+    <hideDelay>0</hideDelay>
     <!-- in milliseconds (1000 = 1 second) -->
-    <showDelay>10</showDelay>
+    <showDelay>0</showDelay>
     <!-- in milliseconds (1000 = 1 second) -->
     <moveButton>Middle</moveButton>
     <!-- 'Left', 'Middle', 'Right' -->
@@ -323,12 +323,21 @@
         <execute>alacritty</execute>
       </action>
     </keybind -->
-    <!-- conky -->
+    <!-- conky 
     <keybind key="W-b">
       <action name="execute">
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
+    </keybind> -->
+    
+    <!-- polybar -->
+    <keybind key="W-b">
+        <action name="execute">
+            <execute>sh ~/.config/polybar/togglePoly</execute>
+        </action>
     </keybind>
+
+
     <!--
         
     <keybind key="W-Right">
@@ -612,10 +621,10 @@
     <!-- minimize window -->
     <keybind key="W-n">
       <action name="UnmaximizeFull"/>
-      <!-- action name="MoveResizeTo">
-        <width> 80% </width>
-        <height> 80% </height>
-      </action-->
+      <action name="MoveResizeTo">
+        <width> 90% </width>
+        <height> 85% </height>
+      </action>
     </keybind>
     <!-- resize in half -->
     <!-- top left -->
@@ -798,7 +807,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <mousebind button="A-Left" action="Drag">
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
