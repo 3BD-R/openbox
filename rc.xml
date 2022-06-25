@@ -128,7 +128,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>2</number>
+    <number>1</number>
     <firstdesk>1</firstdesk>
     <names>
       <name/>
@@ -165,7 +165,7 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>Bottom</position>
+    <position>Floating</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>751</floatingY>
@@ -200,6 +200,11 @@
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>yes</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
       </action>
     </keybind>
     <!-- <keybind key="S-C-A-Left">
@@ -329,15 +334,12 @@
         <execute>sh ~/.config/conky/toggleconkyopenbox</execute>
       </action>
     </keybind> -->
-    
     <!-- polybar -->
     <keybind key="W-b">
-        <action name="execute">
-            <execute>sh ~/.config/polybar/togglePoly</execute>
-        </action>
+      <action name="execute">
+        <execute>polybar-msg cmd toggle</execute>
+      </action>
     </keybind>
-
-
     <!--
         
     <keybind key="W-Right">
@@ -807,7 +809,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="A-Right" action="Drag">
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
