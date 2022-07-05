@@ -573,7 +573,7 @@
       <action name="Execute">
         <name>dmenu</name>
         <command><!--        dmenu_run -i -fn "DejaVu Sans Mono:size=10" -nb "#000000" -nf "#bbbbbb" -sb "#008800" -sf "#000000"  -->
-       dmenu_run -i -fn "DejaVu Sans Mono:size=10" 
+       mdmenu 
         </command>
       </action>
     </keybind>
