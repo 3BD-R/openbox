@@ -168,7 +168,7 @@
     <position>Floating</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
-    <floatingY>751</floatingY>
+    <floatingY>21</floatingY>
     <noStrut>no</noStrut>
     <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
@@ -316,10 +316,10 @@
       </action>
     </keybind> -->
     <!-- Keybindings for running applications -->
-    <!-- st-terminal -->
+    <!-- kitty -->
     <keybind key="C-A-z">
       <action name="execute">
-        <execute>st</execute>
+        <execute>kitty</execute>
       </action>
     </keybind>
     <!-- Alacritty -->
