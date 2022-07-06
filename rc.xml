@@ -501,12 +501,12 @@
     <!-- HINT : USE KEYCHANE TO Resize -->
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight -inc 3</command>
+        <command>brightness up</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight -dec 3</command>
+        <command>brightness down</command>
       </action>
     </keybind>
     <!--   <keybind key="XF86AudioRaiseVolume">
